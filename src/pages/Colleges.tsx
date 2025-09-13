@@ -110,13 +110,13 @@ const Colleges = () => {
     }
   ];
 
-  const states = ["All States", "Delhi", "Maharashtra", "Karnataka", "Tamil Nadu", "West Bengal", "Rajasthan"];
+  const states = ["All Districts", "Jammu", "Samba", "Kathua", "Udhampur", "Reasi", "Doda", "Kishtwar", "Ramban", "Poonch", "Rajouri"];
   const streams = ["All Streams", "Arts", "Science", "Commerce", "Engineering", "Medical"];
 
   const filteredColleges = colleges.filter(college => {
     const matchesSearch = college.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          college.location.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesState = selectedState === "" || selectedState === "All States" || 
+    const matchesState = selectedState === "" || selectedState === "All Districts" || 
                         college.location.includes(selectedState);
     const matchesStream = selectedStream === "" || selectedStream === "All Streams" ||
                          college.specializations.some(spec => 
@@ -153,10 +153,10 @@ const Colleges = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">State</label>
+                <label className="block text-sm font-medium text-foreground mb-2">District</label>
                 <Select value={selectedState} onValueChange={setSelectedState}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select state" />
+                    <SelectValue placeholder="Select district" />
                   </SelectTrigger>
                   <SelectContent>
                     {states.map((state) => (

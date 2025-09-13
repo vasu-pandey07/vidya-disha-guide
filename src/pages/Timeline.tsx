@@ -74,6 +74,24 @@ const Timeline = () => {
     },
     {
       id: 8,
+      title: "Jammu University Form Submission",
+      date: new Date(2025, 2, 5), // March 5, 2025
+      category: "University Forms",
+      description: "Application form submission deadline for Jammu University undergraduate programs",
+      type: "deadline",
+      importance: "high"
+    },
+    {
+      id: 9,
+      title: "Central University of Jammu Application",
+      date: new Date(2025, 2, 15), // March 15, 2025
+      category: "University Forms",
+      description: "Central University of Jammu application form submission opens",
+      type: "application",
+      importance: "high"
+    },
+    {
+      id: 10,
       title: "Scholarship Applications Open",
       date: new Date(2025, 2, 1), // March 1, 2025
       category: "Scholarships",
@@ -82,7 +100,7 @@ const Timeline = () => {
       importance: "medium"
     },
     {
-      id: 9,
+      id: 11,
       title: "JEE Advanced Registration",
       date: new Date(2025, 3, 10), // April 10, 2025
       category: "Entrance Exams",
@@ -91,7 +109,7 @@ const Timeline = () => {
       importance: "high"
     },
     {
-      id: 10,
+      id: 12,
       title: "CBSE Result Declaration",
       date: new Date(2025, 4, 15), // May 15, 2025
       category: "Results",
@@ -130,6 +148,7 @@ const Timeline = () => {
       case "Entrance Exams": return "bg-green-100 text-green-800";
       case "Medical Entrance": return "bg-red-100 text-red-800";
       case "College Admissions": return "bg-purple-100 text-purple-800";
+      case "University Forms": return "bg-orange-100 text-orange-800";
       case "Scholarships": return "bg-yellow-100 text-yellow-800";
       case "Results": return "bg-indigo-100 text-indigo-800";
       default: return "bg-gray-100 text-gray-800";

@@ -14,52 +14,112 @@ const Quiz = () => {
   const questions = [
     {
       id: 1,
-      question: "Which activity do you enjoy most in your free time?",
+      question: "Which subject do you enjoy studying the most?",
       options: [
-        { value: "reading", label: "Reading books and articles", stream: "arts" },
-        { value: "experiments", label: "Conducting experiments or building things", stream: "science" },
-        { value: "numbers", label: "Working with numbers and calculations", stream: "commerce" },
-        { value: "creative", label: "Creative activities like art or music", stream: "arts" }
+        { value: "mathematics", label: "Mathematics", stream: "science" },
+        { value: "science", label: "Science (Physics, Chemistry, Biology)", stream: "science" },
+        { value: "literature", label: "Literature / Languages / History", stream: "arts" },
+        { value: "business", label: "Business Studies / Economics", stream: "commerce" },
+        { value: "technical", label: "Hands-on Technical Skills (IT, Electronics, Mechanics)", stream: "technical" }
       ]
     },
     {
       id: 2,
-      question: "What subject interests you the most?",
+      question: "When faced with a problem, how do you prefer to solve it?",
       options: [
-        { value: "literature", label: "Literature and Languages", stream: "arts" },
-        { value: "physics", label: "Physics and Chemistry", stream: "science" },
-        { value: "economics", label: "Economics and Business Studies", stream: "commerce" },
-        { value: "biology", label: "Biology and Environmental Science", stream: "science" }
+        { value: "formulas", label: "By applying formulas and logical reasoning", stream: "science" },
+        { value: "experimenting", label: "By experimenting and observing results", stream: "science" },
+        { value: "discussing", label: "By discussing and expressing ideas in words", stream: "arts" },
+        { value: "analyzing", label: "By analyzing market trends or financial data", stream: "commerce" },
+        { value: "creating", label: "By creating or fixing something practically", stream: "technical" }
       ]
     },
     {
       id: 3,
-      question: "What type of career appeals to you?",
+      question: "Which activity excites you the most?",
       options: [
-        { value: "teaching", label: "Teaching and Education", stream: "arts" },
-        { value: "research", label: "Research and Development", stream: "science" },
-        { value: "business", label: "Business and Finance", stream: "commerce" },
-        { value: "healthcare", label: "Healthcare and Medicine", stream: "science" }
+        { value: "puzzles", label: "Solving puzzles or logical problems", stream: "science" },
+        { value: "experiments", label: "Conducting science experiments", stream: "science" },
+        { value: "writing", label: "Writing stories, essays, or speeches", stream: "arts" },
+        { value: "planning", label: "Planning a budget or business idea", stream: "commerce" },
+        { value: "building", label: "Building or repairing gadgets/machines", stream: "technical" }
       ]
     },
     {
       id: 4,
-      question: "How do you prefer to solve problems?",
+      question: "Which of these careers sounds most appealing to you?",
       options: [
-        { value: "discussion", label: "Through discussion and analysis", stream: "arts" },
-        { value: "logical", label: "Using logical reasoning and data", stream: "science" },
-        { value: "practical", label: "Finding practical business solutions", stream: "commerce" },
-        { value: "systematic", label: "Following systematic procedures", stream: "science" }
+        { value: "engineer", label: "Engineer, Data Scientist", stream: "science" },
+        { value: "doctor", label: "Doctor, Researcher, Biologist", stream: "science" },
+        { value: "writer", label: "Writer, Lawyer, Teacher, Journalist", stream: "arts" },
+        { value: "accountant", label: "Chartered Accountant, Manager, Entrepreneur", stream: "commerce" },
+        { value: "technician", label: "Technician, Designer, Skilled Professional", stream: "technical" }
       ]
     },
     {
       id: 5,
-      question: "What motivates you the most?",
+      question: "How do you usually make decisions?",
       options: [
-        { value: "helping", label: "Helping others and making a difference", stream: "arts" },
-        { value: "discovery", label: "Making new discoveries", stream: "science" },
-        { value: "success", label: "Achieving financial success", stream: "commerce" },
-        { value: "innovation", label: "Creating innovative solutions", stream: "science" }
+        { value: "logic", label: "Based on logic and numbers", stream: "science" },
+        { value: "facts", label: "Based on scientific facts and analysis", stream: "science" },
+        { value: "creativity", label: "Based on feelings, creativity, or opinions", stream: "arts" },
+        { value: "profit", label: "Based on money/profit and practical benefits", stream: "commerce" },
+        { value: "testing", label: "Based on hands-on testing and real-world use", stream: "technical" }
+      ]
+    },
+    {
+      id: 6,
+      question: "What type of environment do you prefer working in?",
+      options: [
+        { value: "technical", label: "Solving technical problems independently", stream: "science" },
+        { value: "research", label: "Research labs, hospitals, or experiments", stream: "science" },
+        { value: "creative", label: "Classrooms, libraries, stage, or media rooms", stream: "arts" },
+        { value: "corporate", label: "Corporate offices, startups, or finance sector", stream: "commerce" },
+        { value: "workshop", label: "Workshops, studios, or field-based jobs", stream: "technical" }
+      ]
+    },
+    {
+      id: 7,
+      question: "Which school subject do you find the hardest to focus on?",
+      options: [
+        { value: "languages", label: "Languages", stream: "science" },
+        { value: "science_exp", label: "Science experiments", stream: "arts" },
+        { value: "mathematics", label: "Mathematics", stream: "arts" },
+        { value: "history", label: "History / Social Studies", stream: "science" },
+        { value: "theory", label: "None – I like practical learning more than theory", stream: "technical" }
+      ]
+    },
+    {
+      id: 8,
+      question: "Which skill do you think defines you best?",
+      options: [
+        { value: "analytical", label: "Analytical and logical thinking", stream: "science" },
+        { value: "observing", label: "Observing, experimenting, and problem-solving", stream: "science" },
+        { value: "communication", label: "Creativity and communication", stream: "arts" },
+        { value: "planning", label: "Planning, organizing, and money management", stream: "commerce" },
+        { value: "technical_skill", label: "Technical know-how and practical work", stream: "technical" }
+      ]
+    },
+    {
+      id: 9,
+      question: "If you had to choose one hobby for life, what would it be?",
+      options: [
+        { value: "sudoku", label: "Solving Sudoku, coding, or chess", stream: "science" },
+        { value: "science_projects", label: "Doing science projects, exploring nature", stream: "science" },
+        { value: "reading", label: "Reading books, debating, acting, writing", stream: "arts" },
+        { value: "business_hobby", label: "Running a small business, trading, organizing events", stream: "commerce" },
+        { value: "crafting", label: "Crafting, repairing, designing, or DIY projects", stream: "technical" }
+      ]
+    },
+    {
+      id: 10,
+      question: "Which goal matches your ambition the most?",
+      options: [
+        { value: "innovating", label: "Innovating new technologies", stream: "science" },
+        { value: "research_contrib", label: "Contributing to medical or scientific research", stream: "science" },
+        { value: "influencing", label: "Influencing society with words, art, or law", stream: "arts" },
+        { value: "financial", label: "Becoming financially independent through business or finance", stream: "commerce" },
+        { value: "mastering", label: "Mastering a skill/trade and becoming a professional expert", stream: "technical" }
       ]
     }
   ];
@@ -85,7 +145,7 @@ const Quiz = () => {
   };
 
   const calculateResults = () => {
-    const streamCounts = { arts: 0, science: 0, commerce: 0 };
+    const streamCounts = { arts: 0, science: 0, commerce: 0, technical: 0 };
     
     Object.values(answers).forEach((answer) => {
       questions.forEach((q) => {
@@ -122,6 +182,12 @@ const Quiz = () => {
         description: "Great for those interested in business, finance, and understanding economic systems.",
         courses: ["B.Com", "BBA", "CA", "CS", "CMA"],
         careers: ["Chartered Accountant", "Business Manager", "Banker", "Financial Analyst", "Entrepreneur"]
+      },
+      technical: {
+        name: "Technical/Vocational",
+        description: "Perfect for hands-on learners who enjoy practical work and technical skills.",
+        courses: ["B.Tech", "Diploma in Engineering", "ITI Courses", "B.Sc IT", "BCA"],
+        careers: ["Software Developer", "Technician", "Designer", "IT Professional", "Skilled Craftsman"]
       }
     };
     return streamData[stream as keyof typeof streamData];
@@ -186,13 +252,18 @@ const Quiz = () => {
           </div>
 
           <div className="text-center space-y-4">
-            <Button onClick={() => {
-              setCurrentQuestion(0);
-              setAnswers({});
-              setShowResults(false);
-            }}>
-              Retake Quiz
-            </Button>
+            <div className="space-x-4">
+              <Button onClick={() => {
+                setCurrentQuestion(0);
+                setAnswers({});
+                setShowResults(false);
+              }}>
+                Retake Quiz
+              </Button>
+              <Button variant="outline" onClick={() => window.location.href = '/dashboard'}>
+                View Dashboard
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground">
               Want more detailed guidance? Visit your dashboard for personalized recommendations.
             </p>
